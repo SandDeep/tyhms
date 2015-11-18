@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.techyolk.hms.model">
+	<class name="Patient" table="tyhms_patm">
+		<meta attribute="class-description">
+			This class contains Patient details
+		</meta>
+		
+		<id name="id" column="pid">
+			<generator class="native" />
+		</id>
+		
+		<property name="uid" column="uid" type="int" />
+		<property name="patientName" column="p_name" type="string" />
+		<property name="address" column="address" type="string" />
+		
+		<property name="city" column="city" type="int" />
+		<property name="email" column="email" type="string" />
+		<property name="primaryNumber" column="cell1" type="string" />
+		<property name="secondaryNumber" column="cell2" type="string" />
+		
+		<property name="emergencyContactName" column="em_contact_name" type="string" />
+		<property name="secondaryContactNumber" column="em_contact_ph" type="string" />
+		
+		<property name="sex" column="sex" type="string" />
+		<property name="dateOfBirth" column="dob" type="string" />
+		<property name="occupation" column="occupation" type="string" />
+		<property name="mediclaim" column="mediclaim" type="string" />
+		<property name="tpa" column="tpa" type="string" />
+		
+		<property name="height" column="height" type="int" />
+		
+		<property name="dateOfRegistraion" column="reg_dt" type="string" />
+		<property name="lastUpdated" column="last_updated" type="string" />
+		<property name="remarks" column="remarks" type="string" />
+		
+		
+		<!-- <property name="date" type="timestamp" column="EVENT_DATE" /> -->
+
+		<!-- Without the column attribute, Hibernate by default uses the property 
+			name as the column name
+		<property name="title" /> -->
+	</class>
+</hibernate-mapping>

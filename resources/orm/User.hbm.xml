@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.techyolk.hms.model">
+	<class name="User" table="tyhms_userm">
+		<meta attribute="class-description">
+			This class contains user details
+		</meta>
+		
+		<id name="id" column="uid">
+			<generator class="native" />
+		</id>
+		
+		<property name="username" column="uname" type="string" />
+		<property name="password" column="pass" type="string" />
+		<property name="groupId" column="g_id" type="int" />
+		<property name="remarks" column="remarks" type="string" />
+		<property name="status" column="status" type="int" />
+		
+		<property name="primaryEmail" column="p_email" type="string" />
+		<property name="secondaryEmail" column="s_email" type="string" />
+		<property name="primaryCell" column="p_cell" type="string" />
+		<property name="secondaryCell" column="s_cell" type="string" />
+		
+		<!-- <property name="date" type="timestamp" column="EVENT_DATE" /> -->
+
+		<!-- Without the column attribute, Hibernate by default uses the property 
+			name as the column name
+		<property name="title" /> -->
+	</class>
+</hibernate-mapping>
